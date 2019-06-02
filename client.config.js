@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: "./src/client/client.ts",
   module: {
@@ -17,6 +19,6 @@ module.exports = {
   },
   output: {
     filename: "client.js",
-    path: __dirname + "/dist/"
+    path: path.resolve(__dirname, "dist")
   }
 };
