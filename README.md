@@ -19,14 +19,14 @@ This is a basic boilerplate for creating a FiveM resource using Typescript. It i
 
 ## Usage
 1. Clone repository into your `resources/[local]` folder.
-2. `npm i` the dependencies.
+2. `npm i` or `yarn` to install the dependencies.
 3. Start development.
 
 ### Development
-Use `npm run watchc` and `npm run watchs` to watch files during development.
+Use `npm run watch` or `yarn watch` to watch files during development.
 
 ### Production
-Build your production ready code with `npm run build`.
+Build your production ready code with `npm run build` or `yarn build`.
 
 This will build the client and server script with the `--mode production` flag.
 
@@ -37,8 +37,7 @@ The `fxmanifest.lua` is not setup to automatically build upon first FXServer sta
 dependency 'yarn'
 dependency 'webpack'
 
-webpack_config 'client.config.js'
-webpack_config 'server.config.js'
+webpack_config 'webpack.config.js'
 ```
 
 ## License
