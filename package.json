@@ -1,28 +1,33 @@
 {
   "name": "fivem-ts-boilerplate",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Typescript Boilerplate for FiveM",
   "main": "index.js",
   "repository": "https://github.com/d0p3t/fivem-ts-boilerplate",
   "author": "d0p3t <d0p3t@users.noreply.github.com>",
   "scripts": {
-    "build": "npm run buildc && npm run builds",
-    "buildc": "webpack --mode production --config client.config.js",
-    "builds": "webpack --mode production --config server.config.js",
-    "watchc": "webpack --mode development --watch true --config client.config.js",
-    "watchs": "webpack --mode development --watch true --config server.config.js"
+    "build": "webpack --mode production",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "watch": "webpack --mode development --watch true"
   },
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@citizenfx/client": "^1.0.2114-1",
-    "@citizenfx/server": "^1.0.2114-1",
-    "@types/node": "^13.1.4"
+    "@citizenfx/client": "^1.0.2312-1",
+    "@citizenfx/server": "^1.0.2312-1",
+    "@types/node": "^13.9.5"
   },
   "devDependencies": {
-    "ts-loader": "^6.0.2",
-    "typescript": "^3.3.1",
-    "webpack": "^4.34.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-loader": "^3.0.3",
+    "prettier": "^2.0.2",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.2"
   }
 }
