@@ -11,5 +11,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
   ],
-  ignorePatterns: ["webpack.config.js"]
+  ignorePatterns: ["webpack.config.js"],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-async-promise-executor": "off"
+  }
 };
