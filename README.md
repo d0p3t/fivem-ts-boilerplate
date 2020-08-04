@@ -10,8 +10,11 @@
   <a href="https://github.com/d0p3t/fivem-ts-boilerplate/commits/master">
     <img src="https://img.shields.io/github/last-commit/d0p3t/fivem-ts-boilerplate.svg?style=flat" alt="Last commit">
   </a>
+  <a href="">
+    <img src="https://img.shields.io/github/workflow/status/d0p3t/fivem-ts-boilerplate/Node.js%20CI" alt="Workflow">
+  </a>
   <a href="https://discord.d0p3t.nl">
-    <img src="https://img.shields.io/discord/330910293934997504?label=Discord" alt="Discord">
+    <img src="https://img.shields.io/discord/330910293934997504?label=Chat" alt="Chat">
   </a>
 </p>
 
