@@ -40,5 +40,7 @@ dependency 'webpack'
 webpack_config 'webpack.config.js'
 ```
 
+However, due to the speed performance of the pre-packaged webpack/yarn of cfx-server-data, we suggest you don't do this and build manually as described previously ("Production").
+
 ## License
 This product is MIT licensed. Please make sure you give credit and include this license in your product.

@@ -1,6 +1,6 @@
 {
   "name": "fivem-ts-boilerplate",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Typescript Boilerplate for FiveM",
   "main": "index.js",
   "repository": "https://github.com/d0p3t/fivem-ts-boilerplate",
