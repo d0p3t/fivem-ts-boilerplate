@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
@@ -17,7 +17,18 @@ const server = {
   },
   plugins: [
     new webpack.DefinePlugin({ 'global.GENTLY': false }),
-    new CleanWebpackPlugin()
+    new RemovePlugin({
+      before: {
+        include: [
+          path.resolve(buildPath, 'server')
+        ]
+      },
+      watch: {
+        include: [
+          path.resolve(buildPath, 'server')
+        ]
+      }
+    })
   ],
   optimization: {
     minimize: true,
@@ -43,6 +54,20 @@ const client = {
       },
     ],
   },
+  plugins: [
+    new RemovePlugin({
+      before: {
+        include: [
+          path.resolve(buildPath, 'client')
+        ]
+      },
+      watch: {
+        include: [
+          path.resolve(buildPath, 'client')
+        ]
+      }
+    })
+  ],
   optimization: {
     minimize: true,
   },
