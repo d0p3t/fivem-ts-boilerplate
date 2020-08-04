@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
@@ -14,7 +15,10 @@ const server = {
       },
     ],
   },
-  plugins: [new webpack.DefinePlugin({ 'global.GENTLY': false })],
+  plugins: [
+    new webpack.DefinePlugin({ 'global.GENTLY': false }),
+    new CleanWebpackPlugin()
+  ],
   optimization: {
     minimize: true,
   },
@@ -22,8 +26,8 @@ const server = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'server.js',
-    path: buildPath,
+    filename: '[contenthash].server.js',
+    path: path.resolve(buildPath, 'server')
   },
   target: 'node',
 };
@@ -46,8 +50,8 @@ const client = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'client.js',
-    path: buildPath,
+    filename: '[contenthash].client.js',
+    path: path.resolve(buildPath, 'client'),
   },
 };
 

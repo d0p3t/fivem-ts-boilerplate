@@ -6,13 +6,15 @@
     },
     "outDir": "./",
     "noImplicitAny": false,
-    "module": "es6",
+    "module": "commonjs",
     "target": "es6",
     "allowJs": true,
     "lib": ["es2017"],
     "types": ["@citizenfx/client", "@types/node"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["./**/*"],
-  "exclude": []
+  "exclude": ["**/node_modules", "**/__tests__/*"]
 }
