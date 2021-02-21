@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    'node': true
+    node: true,
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -9,11 +9,12 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
+    'plugin:prettier/recommended',
   ],
-  ignorePatterns: ["webpack.config.js"],
+  ignorePatterns: ['webpack.config.js'],
   rules: {
-    "@typescript-eslint/no-explicit-any": "off",
-    "no-async-promise-executor": "off"
-  }
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-async-promise-executor': 'off',
+  },
 };
