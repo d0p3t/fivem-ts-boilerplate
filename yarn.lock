@@ -2041,6 +2041,11 @@ trash@6.1.1:
     uuid "^3.3.2"
     xdg-trashdir "^2.1.1"
 
+"true@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/true/-/true-0.0.4.tgz#921ebfbd58122d3a66cfff6dc054daf269eb9f21"
+  integrity sha1-kh6/vVgSLTpmz/9twFTa8mnrnyE=
+
 ts-loader@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-8.1.0.tgz#d6292487df279c7cc79b6d3b70bb9d31682b693e"
