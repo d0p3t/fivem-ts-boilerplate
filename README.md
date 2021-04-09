@@ -34,7 +34,7 @@ Build your production ready code with `npm run build`.
 This will build the client and server script with the `--mode production` flag.
 
 ### Automatic Builds (Optional)
-The `fxmanifest.lua` is not setup to automatically build upon first FXServer start. If you'd like to setup automatic builds you must add the following to your `fxmanifest.lua`.
+The `fxmanifest.lua` is setupped to automatically build upon first FXServer start. If you'd like to disable automatic builds you must remove the following from your `fxmanifest.lua`.
 
 ```lua
 dependency 'yarn'
@@ -42,8 +42,6 @@ dependency 'webpack'
 
 webpack_config 'webpack.config.js'
 ```
-
-However, due to the speed performance of the pre-packaged webpack/yarn of cfx-server-data, we suggest you don't do this and build manually as described previously ("Production").
 
 ## License
 This product is MIT licensed. Please make sure you give credit and include this license in your product.
