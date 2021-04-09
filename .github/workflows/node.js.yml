@@ -24,6 +24,6 @@ jobs:
       uses: borales/actions-yarn@v2.3.0
       with:
         node-version: ${{ matrix.node-version }}
-    - run: rm -rf node_modules && yarn install --frozen-lockfile
+    - run: sudo rm -rf node_modules && yarn install --frozen-lockfile
     - run: yarn run lint
     - run: yarn run build --if-present
