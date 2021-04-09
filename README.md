@@ -22,14 +22,14 @@ This is a basic boilerplate for creating a FiveM resource using Typescript. It i
 
 ## Usage
 1. Clone repository into your `resources/[local]` folder.
-2. `npm i` the dependencies.
+2. `yarn install` the dependencies.
 3. Start development.
 
 ### Development
-Use `npm run watch` to watch files during development.
+Use `yarn run watch` to watch files during development.
 
 ### Production
-Build your production ready code with `npm run build`.
+Build your production ready code with `yarn run build`.
 
 This will build the client and server script with the `--mode production` flag.
 
