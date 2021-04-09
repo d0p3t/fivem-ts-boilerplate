@@ -1,21 +1,23 @@
 const webpack = require('webpack');
 const path = require('path');
 const RemovePlugin = require('remove-files-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
 const server = {
-  entry: './src/server/server.ts',
+  entry: __dirname + '/src/server/server.ts',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader', 'eslint-loader'],
+        use: ['ts-loader'],
         exclude: /node_modules/,
       },
     ],
   },
   plugins: [
+    new ESLintPlugin(),
     new webpack.DefinePlugin({ 'global.GENTLY': false }),
     new RemovePlugin({
       before: {
@@ -44,17 +46,18 @@ const server = {
 };
 
 const client = {
-  entry: './src/client/client.ts',
+  entry: __dirname + '/src/client/client.ts',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader', 'eslint-loader'],
+        use: ['ts-loader'],
         exclude: /node_modules/,
       },
     ],
   },
   plugins: [
+    new ESLintPlugin(),
     new RemovePlugin({
       before: {
         include: [
